@@ -1,0 +1,131 @@
+<html>
+<head>
+    <title>Create Account</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+     
+        div.form-container {
+      width: 200px;
+      height: 50px;
+      margin: auto;
+      text-align: center;
+
+      }
+      label {
+      display: inline-block;
+      text-align: left;
+      width: 200px;
+      font-weight: bold;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    input[type=submit] {
+      background-color: green;
+      border-radius: 5px;
+      font-weight: bold;
+      color: white;
+    }
+    input[type=text], input[type=email], input[type=password] {
+      width: 200px;
+
+      </style>
+</head>
+
+
+<!-- Navigation menu -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="category.html">Produce Category</a>
+  <a href="contact.html">Contact</a>
+  <a href="order.html">Track Order</a>
+  <a href="about.html">About</a>
+  <a href="helper.html">Grocery Store Helper</a>
+  <a href="stores.html">Stores</a>
+  <a href="faq.html">FAQ</a>
+  <a href="account.html">Create an Account</a>
+</div>
+
+  <span style="font-size:30px;cursor:pointer; background-color:white;" onclick="openNav()">&#9776; Create an Account</span>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<body>
+  <div style="background-color:darkgreen; text-align:center;">
+  <h2>Register an Account with Us Today!</h2>
+  
+    <b>A loyalty account at a grocery store can benefit customers by allowing them to earn rewards and discounts for their purchases. 
+     
+    </b>
+    </p>
+
+    <p style="text-align:center; padding-top:0px; padding-right:500px; padding-left:500px; font-size:larger;">
+      <b>
+        Creating an account is fast, easy, and free. 
+      </b>
+      </p>
+
+      <p style="text-align:center; padding-top:0px; padding-right:500px; padding-left:500px; font-size:larger;">
+        <b>
+        You'll be able to manage your autoships, track your orders, write reviews, and more!
+        </b>
+        </p>
+      </div>
+  
+      <br>
+      <br>
+      <br>
+      <br>
+    
+    <div class="form-container">
+      <form>
+        <fieldset>
+          <legend>Create an account</legend>
+          <label for="fullname">Full Name:</label><br>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name"><br>
+
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" placeholder="Enter your email address"><br>
+  
+ 
+  
+          <label for="username">Username:</label><br>
+          <input type="text" id="username" name="username" placeholder="Choose a username"><br>
+  
+          <label for="password">Password:</label><br>
+          <input type="password" id="password" name="password" placeholder="Password (At least 8 characters)"><br>
+  
+          <br>
+          <input type="submit" value="Create Account" onclick="checkPasswordStrength()">
+        </fieldset>
+      </form> 
+    </div>
+
+ 
+  
+    <script>
+      function checkPasswordStrength() {
+        // Get the password from the form
+        var password = document.getElementById("password").value;
+  
+        // Check if the password is strong enough
+        if (password.length < 8) {
+          // If the password is not strong enough, show an alert
+          alert("The password must be at least 8 characters long. Please choose a stronger password.");
+        }
+      }
+    </script>
+
+    </body>
+    
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+        <!-- Navigation menu -->
+        <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="category.html">Produce Category</a>
+  <a href="contact.html">Contact</a>
+  <a href="order.html">Track Order</a>
+  <a href="about.html">About</a>
+  <a href="helper.html">Grocery Store Helper</a>
+  <a href="stores.html">Stores</a>
+  <a href="faq.html">FAQ</a>
+  <a href="account.html">Create an Account</a>
+</div>
+          
+          <span style="font-size:30px;cursor:pointer; " onclick="openNav()">&#9776; Stores</span>
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+
+<h1 style="color:darkgreen;">Grocery Store Finder</h1>
+
+<div style="text-align:center">
+<p>Use the search bar below to look up a grocery store by name:</p>  
+<input type="text" id="search-input" onkeyup="searchTable()" placeholder="Search for store names.." style="">
+</div>
+<table id="store-table" style="text-align:center; background-color: rgb(158, 255, 158); " class="styled-table">
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Store Hours</th>
+  </tr>
+  <tr>
+    <td>Store One</td>
+    <td>123 Main St.</td>
+    <td>9:00 AM - 6:00 PM</td>
+  </tr>
+  <tr>
+    <td>Store Two</td>
+    <td>456 Oak Ave.</td>
+    <td>10:00 AM - 7:00 PM</td>
+  </tr>
+  <tr>
+    <td>Store Three</td>
+    <td>789 Maple Rd.</td>
+    <td>11:00 AM - 8:00 PM</td>
+  </tr>
+  <tr>
+    <td>Store Four</td>
+    <td>321 Birch St.</td>
+    <td>9:00 AM - 6:00 PM</td>
+  </tr>
+  <tr>
+    <td>Store Five</td>
+    <td>654 Cedar Ave.</td>
+    <td>10:00 AM - 7:00 PM</td>
+  </tr>
+  <tr>
+    <td>Store Six</td>
+    <td>987 Pine Rd.</td>
+    <td>11:00 AM - 8:00 PM</td>
+  </tr>
+  <tr>
+    <td>Store Seven</td>
+    <td>246 Willow St.</td>
+    <td>9:00 AM - 6:00 PM</td>
+  </tr>
+  <tr>
+    <td>Store Eight</td>
+    <td>369 Oak Ave.</td>
+    <td>10:00 AM - 7:00 PM</td>
+  </tr>
+  <tr>
+    <td>Store Nine</td>
+    <td>159 Maple Rd.</td>
+    <td>11:00 AM - 8:00 PM</td>
+  </tr>
+  <tr>
+    <td>Store Ten</td>
+    <td>753 Cedar St.</td>
+    <td>9:00 AM - 6:00 PM</td>
+  </tr>
+</table>
+
+<script>
+function searchTable() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("search-input");
+filter = input.value.toUpperCase();
+table = document.getElementById("store-table");
+tr = table.getElementsByTagName("tr");
+
+// Loop through all table rows, and hide those that don't match the search query
+for (i = 0; i < tr.length; i++) {
+  td = tr[i].getElementsByTagName("td")[0];
+  if (td) {
+    txtValue = td.textContent || td.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      tr[i].style.display = "";
+    } else {
+      tr[i].style.display = "none";
+    }
+  }
+}
+}
+
+</script>
+</body>
+</html>
+
+

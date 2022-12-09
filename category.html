@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Grocery Store Produce</title>
+  <style>
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+    }
+  </style>
+   <link rel="stylesheet" href="styles.css" />
+
+</head>
+   <!-- Navigation menu -->
+   <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="category.html">Produce Category</a>
+  <a href="contact.html">Contact</a>
+  <a href="order.html">Track Order</a>
+  <a href="about.html">About</a>
+  <a href="helper.html">Grocery Store Helper</a>
+  <a href="stores.html">Stores</a>
+  <a href="faq.html">FAQ</a>
+  <a href="account.html">Create an Account</a>
+</div>
+      
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Produce Category</span>
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+
+<body>
+  
+  <h1 style="color:darkgreen">Grocery Store Produce</h1>
+  
+
+      
+  <div style="text-align:center;">
+    <button id="FruitsButton" onclick="openTab('Fruits')">Fruits</button>
+    <button id="VegetablesButton" onclick="openTab('Vegetables')">Vegetables</button>
+    <button id="HerbsButton" onclick="openTab('Herbs')">Herbs</button>
+  </div>
+  <div id="Fruits" class="tabcontent">
+    <h2>Fruits</h2>
+    <ul>
+      <li>Apples: A round fruit with red, green, or yellow skin and a white, crispy interior.</li>
+      <li>Bananas: A long, curved fruit with yellow skin and a soft, creamy interior.</li>
+      <li>Oranges: A round citrus fruit with a thick orange skin and a juicy, tangy interior.</li>
+      <li>Strawberries: A small, red fruit with seeds on the outside and a sweet, juicy interior.</li>
+      <li>Grapes: Small, round fruits that grow in clusters and can be green, red, or purple in color.</li>
+    </ul>
+  </div>
+  <div id="Vegetables" class="tabcontent">
+    <h2>Vegetables</h2>
+    <ul>
+      <li>Carrots: A long, thin orange vegetable with a sweet, crispy interior.</li>
+      <li>Cucumbers: A green, cylindrical vegetable with a cool, refreshing interior.</li>
+      <li>Lettuce: A leafy green vegetable used in salads and sandwiches.</li>
+      <li>Peas: Small, round green vegetables that grow in pods and have a sweet, delicate flavor.</li>
+      <li>Tomatoes: A round, red vegetable with a juicy, tangy interior and a soft skin.</li>
+    </ul>
+  </div>
+  <div id="Herbs" class="tabcontent">
+    <h2>Herbs</h2>
+    <ul>
+      <li>Basil: A fragrant, green herb with a sweet, spicy flavor commonly used in Italian cooking.</li>
+      <li>Cilantro: A green herb with a pungent, citrusy flavor commonly used in Mexican and Asian cuisine.</li>
+      <li>Mint: A refreshing, green herb with a cool, invigorating flavor commonly used in drinks and desserts.</li>
+      <li>Rosemary: A woody, fragrant herb with a sharp, pine-like flavor commonly used in Mediterranean cooking.</li>
+      <li>Thyme: A delicate, fragrant herb with a warm, slightly bitter flavor commonly used in French cuisine.</li>
+    </ul>
+  </div>
+  <script>
+    function openTab(tabName) {
+      // Get all elements with class="tabcontent" and hide them
+      var tabcontent = document.get
+      var tabcontent = document.getElementsByClassName("tabcontent");
+      for (var i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      var currentTab = document.getElementById(tabName);
+      currentTab.style.display = "block";
+      var activeButton = document.getElementById(tabName + "Button");
+      activeButton.className += " active";
+    }
+  </script>
+</body>
+</html>

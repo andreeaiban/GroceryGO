@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Status</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+ <!-- Navigation menu -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="category.html">Produce Category</a>
+  <a href="contact.html">Contact</a>
+  <a href="order.html">Track Order</a>
+  <a href="about.html">About</a>
+  <a href="helper.html">Grocery Store Helper</a>
+  <a href="stores.html">Stores</a>
+  <a href="faq.html">FAQ</a>
+  <a href="account.html">Create an Account</a>
+</div>
+  
+  <span style="font-size:30px;cursor:pointer; " onclick="openNav()">&#9776; Track Order</span>
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+<body>
+    <h1 style="color:darkgreen">Order Status</h1>
+    <p>Enter your order number below:</p>
+    <input type="text" id="orderNumber" >
+    <button onclick="showArrivalTime()">Submit</button>
+    <div id="arrivalTime" style="display:none;">
+        <p style="text-align:center">Your order will arrive on: <span id="arrivalDate"></span></p>
+    </div>
+    <script>
+        function showArrivalTime() {
+            // Get the order number from the input field
+            var orderNumber = document.getElementById('orderNumber').value;
+
+            // Calculate the arrival date (assuming 2 business days for delivery)
+            var arrivalDate = new Date();
+            arrivalDate.setDate(arrivalDate.getDate() + 2);
+
+            // Display the arrival date in the span with id "arrivalDate"
+            document.getElementById('arrivalDate').innerHTML = arrivalDate.toDateString();
+
+            // Show the arrival time box
+            document.getElementById('arrivalTime').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

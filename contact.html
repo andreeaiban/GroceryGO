@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css" />
+	
+  </head>
+  <body class="contact">
+
+    <!-- Navigation menu -->
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="category.html">Produce Category</a>
+  <a href="contact.html">Contact</a>
+  <a href="order.html">Track Order</a>
+  <a href="about.html">About</a>
+  <a href="helper.html">Grocery Store Helper</a>
+  <a href="stores.html">Stores</a>
+  <a href="faq.html">FAQ</a>
+  <a href="account.html">Create an Account</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Contact</span>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+
+
+    <h1 style="color:darkgreen;">Contact Us</h1>
+    <p style="text-align:center;">
+        Phone: 555-555-5555 <br>
+
+        Email: info@grocerystore.com <br>
+
+        Address: 123 Main Street, Anytown USA <br>
+
+        Store Hours: <br>
+
+        Monday-Saturday: 9:00am-9:00pm <br>
+
+        Sunday: 10:00am-6:00pm <br>
+
+        We also have a customer service desk located at the front of the store where you can speak with a representative during business hours. Thank you for choosing our grocery store!
+    </p>
+
+
+
+
+    <p style="text-align:center;">Have a question or comment? We'd love to hear from you! Please use the form below to send us a message.</p>
+    <form align="center">
+  <label for="user-input-1">Name: </label> <br>
+  <input type="text" id="user-input-1" name="user-input-1" /><br>
+
+  <label for="user-input-2">Email: </label><br>
+  <input type="text" id="user-input-2" name="user-input-2" /><br>
+  
+  
+  <label for="user-input-3">Phone Number: </label><br>
+  <input type="text" id="user-input-3" name="user-input-3" /><br>
+  
+  <label for="user-input-4">Your query: </label><br>
+  <textarea type="text" id="user-input-4" name="user-input-4" /></textarea><br>
+
+  <button type="button" id="save-button">Save</button>
+</form>
+
+<script>
+  // Get a reference to the save button
+  let saveButton = document.getElementById('save-button');
+
+  // Add an event listener to the save button
+  saveButton.addEventListener('click', () => {
+    // Get the user input from the form
+    let userInput1 = document.getElementById('user-input-1').value;
+    let userInput2 = document.getElementById('user-input-2').value;
+	let userInput3 = document.getElementById('user-input-3').value;
+	let userInput4 = document.getElementById('user-input-4').value;
+
+    // Concatenate the user input
+    let userInput = `Name: ${userInput1}\nEmail: ${userInput2}\nPhone Number: ${userInput3}\nQuery: ${userInput4}`;
+
+    // Create a new Blob with the user input as its contents
+    let userInputBlob = new Blob([userInput], { type: 'text/plain' });
+
+    // Create a URL for the Blob
+    let url = URL.createObjectURL(userInputBlob);
+
+    // Create a new anchor element
+    let a = document.createElement('a');
+
+    // Set the href and download attributes for the anchor element
+    a.href = url;
+    a.download = 'user-input.txt';
+
+    // Add the anchor element to the DOM
+    document.body.appendChild(a);
+
+    // Click the anchor element to start the download
+    a.click();
+
+    // Remove the anchor element from the DOM
+    document.body.removeChild(a);
+  });
+</script>
+
+	
+  </body>
+  </html>
