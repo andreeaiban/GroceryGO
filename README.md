@@ -5,5 +5,5 @@ An online grocery store created using HTML, CSS, and JavaScript would have a cle
 
 Once the website is developed, it would be hosted using a Node.JS server. Node.JS is a popular choice for hosting web applications because it is fast and scalable, which is important for an online grocery store that may receive a large amount of traffic. With Node.JS, the website would be able to handle many concurrent users and provide a smooth and responsive experience for shoppers.
 
-
-https://www.youtube.com/watch?v=-xwgBI_Lj8c&ab_channel=AndreeaIbanescu
+Live Website: https://andreeaiban.github.io/GroceryGO/
+Presentation: https://www.youtube.com/watch?v=-xwgBI_Lj8c&ab_channel=AndreeaIbanescu
